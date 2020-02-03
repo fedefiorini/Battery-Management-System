@@ -1,0 +1,15 @@
+CMSIS_DSPLIB_CM0
+================
+For information on this pre-built library project, please see the
+files in the "docs" subdirectory.
+
+History 
+=======
+
+18 July 2013
+------------
+Updated with sources from ARM's CMSIS 3.20 release (March 2013).
+
+26 April 2012
+-------------
+Built from sources in ARM's CMSIS 3.01 release (07 March 2012).
