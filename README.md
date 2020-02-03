@@ -12,9 +12,9 @@ The software includes FreeRTOS v10 as real-time OS for the whole car.
 It was developed using MCUXpresso and tested using different methods, including SEGGER JLink software and JTrace EDU hardware, oscilloscopes and other electrical measurement tools.
 
 ## Repository structure
-* */docs* contains the whole documentation of the BMS, including the Wiki page (written by me as well) and the datasheets of the components.
-* */pictures* includes all the pictures used in this repository
-* */code*, as the name suggests, contains the BMS code developed last year from scratch. In particular, it's further divided into different folders:
-..* */inc* containing the header files
-..* */libraries* containing the support files (OS, third-party libraries)
-..* */src* containing the source code
+* **/docs** contains the whole documentation of the BMS, including the Wiki page (written by me as well) and the datasheets of the components.
+* **/pictures** includes all the pictures used in this repository
+* **/code**, as the name suggests, contains the BMS code developed last year from scratch. In particular, it's further divided into different folders:
+* */inc* containing the header files
+* */libraries* containing the support files (OS, third-party libraries)
+* */src* containing the source code
