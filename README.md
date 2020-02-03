@@ -6,9 +6,8 @@ This repository contains the code for the Battery Management System that I wrote
 ## Toolchain
 The Battery Management System is one of the Printed Circuit Boards (PCB's) of the DUT19 Formula Student car, and it has been designed, built and tested by the team during last year.
 The design of the PCB can't be made available for the public, as it wasn't my responsibility.
-It was centered around NXP's LPC11C12 Microcontroller and TI's BQ76930 Analog Front End, responsible for the actual battery monitoring and measuring.
+It was centered around NXP's LPC11C24 Microcontroller and TI's BQ76930 Analog Front End, responsible for the actual battery monitoring and measuring.
 
-The software includes FreeRTOS v10 as real-time OS for the whole car.
 It was developed using MCUXpresso and tested using different methods, including SEGGER JLink software and JTrace EDU hardware, oscilloscopes and other electrical measurement tools.
 
 ## Repository structure
