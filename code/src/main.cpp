@@ -235,19 +235,21 @@ int main(void)
 					}
 
 					for (int j=0; j<2; j++) voltage_data.voltages[j] = subset[j];
-					communication::send_data(&voltage_data);
+					/* Do not use. DUT19's proprietary communication protocol */
+					// communication::send_data(&voltage_data);
 				}
 			}
-			protocol::bms::BMSBatVoltage batvoltage_data(monitor.battery_voltage);
-			communication::send_data(&batvoltage_data);
-			protocol::bms::BMSCharge charge_data(monitor.state_of_charge);
-			communication::send_data(&charge_data);
-			protocol::bms::BMSCurrent current_data(adc::current_sense);
-			communication::send_data(&current_data);
-			protocol::bms::BMSTemperatures temperature_data(adc::temperature_readings);
-			communication::send_data(&temperature_data);
-			protocol::bms::BMSState state_data(bms_state);
-			communication::send_data(&state_data);
+			/* Do not use. DUT19's proprietary communication protocol */
+			// protocol::bms::BMSBatVoltage batvoltage_data(monitor.battery_voltage);
+			// communication::send_data(&batvoltage_data);
+			// protocol::bms::BMSCharge charge_data(monitor.state_of_charge);
+			// communication::send_data(&charge_data);
+			// protocol::bms::BMSCurrent current_data(adc::current_sense);
+			// communication::send_data(&current_data);
+			// protocol::bms::BMSTemperatures temperature_data(adc::temperature_readings);
+			// communication::send_data(&temperature_data);
+			// protocol::bms::BMSState state_data(bms_state);
+			// communication::send_data(&state_data);
 
 			can_update_counter = 0;
 		}
@@ -298,7 +300,7 @@ int main(void)
 
 		/* When the BMS is in error state, the counter increases to avoid the error to be
 		 * wiped out with a subsequent usage of the status encoder function.
-		 * If car is in undervoltage error it's not safe to reset the error, so it will never be done. */		
+		 * If car is in undervoltage error it's not safe to reset the error, so it will never be done. */
 		if (bms_state != READY || bms_state != UNDERVOLTAGE)
 		{
 			status_reset++;

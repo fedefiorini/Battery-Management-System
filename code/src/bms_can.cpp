@@ -239,22 +239,23 @@ namespace can
 	}
 }
 
-namespace communication
-{
-	void send_data(protocol::CanPackage *can_package)
-	{
-		/* Retrieve CAN ID from can_package */
-		protocol::can_id can_id(protocol::device_type::BMS, 0, (protocol::package_type) can_package->pckg_t);
-
-		/* Construct CAN message to be sent and send it through the bus */
-		can::message can_message;
-		can_message.id = can_id.get_value();
-		can_message.length = can_package->size;
-		for (int i=0; i<can_package->size; i++)
-		{
-			can_message.data[i] = *(((uint8_t *) can_package) + sizeof(protocol::CanPackage) + i);
-		}
-
-		can::send(&can_message);
-	}
-}
+/* Do not use. DUT19's proprietary communication protocol */
+// namespace communication
+// {
+// 	void send_data(protocol::CanPackage *can_package)
+// 	{
+// 		/* Retrieve CAN ID from can_package */
+// 		protocol::can_id can_id(protocol::device_type::BMS, 0, (protocol::package_type) can_package->pckg_t);
+//
+// 		/* Construct CAN message to be sent and send it through the bus */
+// 		can::message can_message;
+// 		can_message.id = can_id.get_value();
+// 		can_message.length = can_package->size;
+// 		for (int i=0; i<can_package->size; i++)
+// 		{
+// 			can_message.data[i] = *(((uint8_t *) can_package) + sizeof(protocol::CanPackage) + i);
+// 		}
+//
+// 		can::send(&can_message);
+// 	}
+// }

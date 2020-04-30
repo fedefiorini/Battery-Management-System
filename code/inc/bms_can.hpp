@@ -55,11 +55,12 @@ namespace can
 	bool receive(message *msg);
 }
 
-namespace communication
-{
-	/* Sends CAN packages over the CAN bus (updates on BMS status) */
-	void send_data(protocol::CanPackage *data_package);
-}
+/* Do not use. DUT19's proprietary communication protocol */
+// namespace communication
+// {
+// 	/* Sends CAN packages over the CAN bus (updates on BMS status) */
+// 	void send_data(protocol::CanPackage *data_package);
+// }
 
 
 #endif /* BMS_CAN_HPP_ */
