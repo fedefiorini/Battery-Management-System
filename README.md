@@ -14,6 +14,11 @@ It was developed using MCUXpresso and tested using different methods, including 
 * **/docs** contains the whole documentation of the BMS, including the Wiki page (written by me as well) and the datasheets of the components.
 * **/pictures** includes all the pictures used in this repository
 * **/code**, as the name suggests, contains the BMS code developed last year from scratch. In particular, it's further divided into different folders:
-* */inc* containing the header files
-* */libraries* containing the support files (OS, third-party libraries)
-* */src* containing the source code
+	* */inc* containing the header files
+	* */libraries* containing the support files (OS, third-party libraries)
+	* */src* containing the source code
+
+## Wiki Document
+In the *docs* section you can find an (hopefully) useful software guide for this repository, with high-level description of the functionalities and the components of the DUT19's Battery Management System, 
+along with a lower-level and more comprehensive description of the whole codebase, without going too further into details. 
+For implementation details, feel free to consult the code. If you require any information, you can contact me [F. Fiorini](mailto:f.fiorini@student.tudelft.nl).
